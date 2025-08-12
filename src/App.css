@@ -1,11 +1,33 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
-.logo {
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card-container {
+  padding: 2em;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  margin: 40px auto;
+  flex: 1;
+}
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -39,4 +61,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

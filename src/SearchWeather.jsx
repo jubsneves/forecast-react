@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { ClipLoader } from "react-spinners";
+import "./SearchWeather.css";
 
 export default function Weather(props) {
   function displayResponse(response) {
@@ -15,14 +15,16 @@ export default function Weather(props) {
 
   return (
     <div>
-      <h1>Hello</h1>
-      <ClipLoader
-        color="white"
-        loading={1}
-        size={100}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
+      <form className="input-group">
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          className="form-control"
+        />
+        <button type="submit" className="btn btn-primary">
+          Search
+        </button>
+      </form>
     </div>
   );
 }

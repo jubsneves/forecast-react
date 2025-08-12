@@ -1,0 +1,22 @@
+.btn-primary {
+  background-color: #5c7cda;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #2f56ca;
+}
+
+.form-control {
+  background-color: rgba(92, 124, 218, 0.1);
+  border: 1px solid #5c7cda;
+}
+
+.form-control::placeholder {
+  color: #5c7cda;
+}
+
+.form-control:active,
+.form-control:focus {
+  background-color: rgba(92, 124, 218, 0.1);
+  border-color: #5c7cda;
+}

@@ -1,0 +1,26 @@
+.footer {
+    background-color: #5c7cda;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px 4px;
+    padding: 0 6px;
+    color: #2f56ca;
+}
+
+.footer a:hover {
+    background-color: white;
+    
+}
