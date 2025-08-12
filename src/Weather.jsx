@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { ClipLoader } from "react-spinners";
 
 export default function Weather(props) {
   function displayResponse(response) {
@@ -12,5 +13,16 @@ export default function Weather(props) {
 
   axios.get(apiUrl).then(displayResponse);
 
-  return <h1>Hello</h1>;
+  return (
+    <div>
+      <h1>Hello</h1>
+      <ClipLoader
+        color="white"
+        loading={1}
+        size={100}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </div>
+  );
 }
