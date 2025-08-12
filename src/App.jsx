@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="content">
       <main className="card-container">
-        <SearchWeather city="Dublin" />
-        <CurrentWeather city="Dublin" />
+        <SearchWeather />
+        <CurrentWeather />
       </main>
       <Footer />
     </div>
