@@ -56,6 +56,7 @@ h1.h1 {
   background-color: #d5dcf6;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -63,6 +64,7 @@ h1.h1 {
 
 .weather__icon--wind {
   background-image: url(./assets/wind.svg);
+  font-size: 10px;
 }
 
 .weather__icon--humidity {

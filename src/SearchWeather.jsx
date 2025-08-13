@@ -21,8 +21,10 @@ export default function Weather(props) {
       feelslike: forecast.main.feels_like,
       description: forecast.weather[0].description,
       date: new Date(forecast.dt * 1000),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: forecast.weather[0].icon,
     });
+
+    console.log(forecast.weather[0].icon);
   }
 
   //Input form
