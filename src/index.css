@@ -1,6 +1,6 @@
 body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: #e5e8f2;
+  background: #e5e8f2 !important;
 }
 
 /* :root {

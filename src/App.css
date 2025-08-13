@@ -11,11 +11,12 @@ body {
 }
 
 .card-container {
-  padding: 2em;
+  padding: 3em;
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
-    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
   margin: 40px auto;
   flex: 1;
+  min-width: 600px;
 }

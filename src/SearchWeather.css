@@ -1,22 +1,74 @@
-.btn-primary {
+button.btn-primary {
   background-color: #5c7cda;
   border: none;
 }
-.btn-primary:hover {
+button.btn-primary:hover {
   background-color: #2f56ca;
 }
 
-.form-control {
+input.form-control {
   background-color: rgba(92, 124, 218, 0.1);
   border: 1px solid #5c7cda;
 }
 
-.form-control::placeholder {
+input.form-control::placeholder {
   color: #5c7cda;
 }
 
-.form-control:active,
-.form-control:focus {
+input.form-control:active,
+input.form-control:focus {
   background-color: rgba(92, 124, 218, 0.1);
   border-color: #5c7cda;
+}
+
+h1.h1 {
+  color: #112d82;
+  font-weight: 800;
+  font-size: 2em;
+}
+
+.weather__description {
+  font-size: 1em;
+  color: #5c7cda;
+}
+
+.weather__temperature {
+  color: #112d82;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+.weather__details p {
+  color: #2f56ca;
+  font-size: 1em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.weather__details span {
+  font-weight: 800;
+  color: #112d82;
+}
+
+.weather__icon {
+  display: block;
+  border-radius: 6px;
+  background-color: #d5dcf6;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.weather__icon--wind {
+  background-image: url(./assets/wind.svg);
+}
+
+.weather__icon--humidity {
+  background-image: url(./assets/humidity.svg);
+}
+
+.weather__icon--feels-like {
+  background-image: url(./assets/feels-like.svg);
 }
