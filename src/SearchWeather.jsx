@@ -74,7 +74,10 @@ export default function Weather(props) {
       {weather && weather.ready ? (
         <WeatherInfo data={weather} />
       ) : (
-        <p className="text-center mt-4">Loading...</p>
+        <div className="loading">
+          <span className="loading__icon"></span>
+          <p className="text-center loading__text">Loading</p>
+        </div>
       )}
     </div>
   );

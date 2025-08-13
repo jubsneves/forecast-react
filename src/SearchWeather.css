@@ -74,3 +74,24 @@ h1.h1 {
 .weather__icon--feels-like {
   background-image: url(./assets/feels-like.svg);
 }
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.loading__text {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.loading__icon {
+  background-image: url(./assets/loading.svg);
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 10px auto;
+}
