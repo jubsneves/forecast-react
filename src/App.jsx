@@ -4,10 +4,12 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="content">
-      <main className="card-container">
+    <div className="App">
+    <div className="App__content">
+      <main className="App__card">
         <SearchWeather />
       </main>
+    </div>
       <Footer />
     </div>
   );

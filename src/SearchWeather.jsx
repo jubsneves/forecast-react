@@ -23,6 +23,8 @@ export default function Weather(props) {
       date: new Date(forecast.dt * 1000),
       icon: forecast.weather[0].icon,
     });
+
+    console.log(response.data);
   }
 
   //Input form
@@ -71,7 +73,7 @@ export default function Weather(props) {
       {emptyInput && <div className="alert alert-warning">{emptyInput}</div>}
       {weather && weather.ready ? (
         <WeatherInfo data={weather} />
-      ) : (
+      ) : ( 
         <div className="loading">
           <span className="loading__icon"></span>
           <p className="text-center loading__text">Loading</p>

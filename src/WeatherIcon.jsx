@@ -1,7 +1,6 @@
 import React from "react";
-import "./WeatherMapIcon.css";
 
-export default function WeatherMapIcon(props) {
+export default function WeatherIcon(props) {
   const codeMapping = {
     "01d": "./assets/d-clear-sky.png",
     "01n": "./assets/n-clear-sky.png",
@@ -19,15 +18,17 @@ export default function WeatherMapIcon(props) {
     "11n": "./assets/thunderstorm.png",
     "13d": "./assets/snow.png",
     "13n": "./assets/snow.png",
-    "50d": "./assets/d-mist.mist",
-    "50n": "./assets/n-mist.mist",
+    "50d": "./assets/d-mist.png",
+    "50n": "./assets/n-mist.png",
   };
+
+  const size = props.size || 60;
 
   return (
     <img
       src={codeMapping[props.code]}
       alt={props.alt}
-      className="weather__icon--current"
+      style={{ width: `${size}px` }}
     />
   );
 }

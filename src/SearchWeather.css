@@ -38,6 +38,10 @@ h1.h1 {
   font-size: 3em;
 }
 
+img.WeatherInfo__icon {
+  max-width: 60px;
+}
+
 .weather__temperature span {
   font-size: 12px;
 }
@@ -54,7 +58,7 @@ h1.h1 {
   color: #112d82;
 }
 
-.weather__icon {
+.weather__details--icon {
   display: block;
   border-radius: 6px;
   background-color: #d5dcf6;
@@ -66,16 +70,16 @@ h1.h1 {
   margin-right: 10px;
 }
 
-.weather__icon--wind {
+.weather__details--wind {
   background-image: url(./assets/wind.svg);
   font-size: 10px;
 }
 
-.weather__icon--humidity {
+.weather__details--humidity {
   background-image: url(./assets/humidity.svg);
 }
 
-.weather__icon--feels-like {
+.weather__details--feels-like {
   background-image: url(./assets/feels-like.svg);
 }
 

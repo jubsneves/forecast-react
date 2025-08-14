@@ -1,7 +1,8 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherMapIcon from "./WeatherMapIcon";
+import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -17,9 +18,9 @@ export default function WeatherInfo(props) {
               {props.data.description}
             </h5>
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-end">
-            <div>
-              <WeatherMapIcon
+          <div className="d-flex flex-row align-items-center justify-content-end gap-2">
+            <div className="WeatherInfo__icon">
+              <WeatherIcon
                 code={props.data.icon}
                 alt={props.data.description}
               />
@@ -29,21 +30,21 @@ export default function WeatherInfo(props) {
         </div>
         <div className="d-flex flex-row justify-content-between align-items-center my-4">
           <div className="weather__details d-flex flex-row align-items-center">
-            <span className="weather__icon weather__icon--wind"></span>
+            <span className="weather__details--icon weather__details--wind"></span>
             <div>
               <span>{Math.round(props.data.wind)}km/h</span>
               <p>wind</p>
             </div>
           </div>
           <div className="weather__details d-flex flex-row align-items-center">
-            <span className="weather__icon weather__icon--humidity"></span>
+            <span className="weather__details--icon weather__details--humidity"></span>
             <div>
               <span>{Math.round(props.data.humidity)}%</span>
               <p>humidity</p>
             </div>
           </div>
           <div className="weather__details d-flex flex-row align-items-center">
-            <span className="weather__icon weather__icon--feels-like"></span>
+            <span className="weather__details--icon weather__details--feels-like"></span>
             <div>
               <span>{Math.round(props.data.feelslike)}°</span>
               <p>feels like</p>
@@ -52,6 +53,7 @@ export default function WeatherInfo(props) {
         </div>
       </div>
       <hr />
+      <WeatherForecast />
     </div>
   );
 }
