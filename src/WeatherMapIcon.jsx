@@ -1,7 +1,7 @@
 import React from "react";
-import "./WeatherIcon.css";
+import "./WeatherMapIcon.css";
 
-export default function WeatherIcon(props) {
+export default function WeatherMapIcon(props) {
   const codeMapping = {
     "01d": "./assets/d-clear-sky.png",
     "01n": "./assets/n-clear-sky.png",

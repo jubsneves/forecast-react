@@ -21,5 +21,5 @@ export default function FormattedDate(props) {
   let hours = props.date.getHours().toString().padStart(2, "0");
   let minutes = props.date.getMinutes().toString().padStart(2, "0");
 
-  return `${days[day]} ${months[month]} ${hours}:${minutes} - `;
+  return `${days[day]}, ${hours}:${minutes} - `;
 }

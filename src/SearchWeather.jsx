@@ -23,8 +23,6 @@ export default function Weather(props) {
       date: new Date(forecast.dt * 1000),
       icon: forecast.weather[0].icon,
     });
-
-    console.log(forecast.weather[0].icon);
   }
 
   //Input form
