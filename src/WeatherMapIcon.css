@@ -1,4 +1,4 @@
 .weather__icon--current {
-  width: 90%;
+  max-width: 60px;
   margin-right: 6px;
 }

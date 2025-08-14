@@ -38,6 +38,10 @@ h1.h1 {
   font-size: 3em;
 }
 
+.weather__temperature span {
+  font-size: 12px;
+}
+
 .weather__details p {
   color: #2f56ca;
   font-size: 1em;

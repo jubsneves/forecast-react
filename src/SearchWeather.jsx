@@ -4,8 +4,8 @@ import WeatherInfo from "./WeatherInfo";
 import "./SearchWeather.css";
 
 export default function Weather(props) {
+  const [weather, setWeather] = useState({ ready: false });
   const [city, setCity] = useState("");
-  const [weather, setWeather] = useState(null);
   const [emptyInput, setEmptyInput] = useState("");
 
   //set API data
