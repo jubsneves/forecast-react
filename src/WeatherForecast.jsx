@@ -1,28 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
-import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecast(props) {
-  return (
-    <div className="WeatherForecast mt-5">
-      <div className="d-flex justify-content-between w-100">
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
-        <div className="position-relative">
-          <div className="WeatherForecast__card d-flex flex-column flex-fill mx-1">
-            <span className="WeatherForecast__icon">
-              <WeatherIcon code="01d" size={40} />
-            </span>
-            <span className="WeatherForecast__day text-center mt-3">Tue</span>
-            <span className="WeatherForecast__temperature text-center">
-              <strong>20°C</strong> | 12°C{" "}
-            </span>
-          </div>
+  function handleResponse(response) {
+    setForecast(response.data);
+    setLoaded(true);
+  }
+
+  function load() {
+    let key = "f5e814a04eddfab1740f07bf0328eee2";
+    let units = "metric";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${key}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
+    return null;
+  }
+
+  if (loaded) {
+    return (
+      <div className="WeatherForecast mt-5">
+        <div className="d-flex justify-content-between w-100">
+          {forecast.list.map((day, i) => {
+            if (i < 5) {
+              return <WeatherForecastDay key={i} data={day} />;
+            } else {
+              return null;
+            }
+          })}
         </div>
-
-
-
       </div>
-    </div>
-  );
+    );
+  } else {
+    load();
+  }
 }

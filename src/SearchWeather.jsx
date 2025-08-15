@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./SearchWeather.css";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState('');
   const [emptyInput, setEmptyInput] = useState("");
 
   //set API data
@@ -22,12 +23,11 @@ export default function Weather(props) {
       description: forecast.weather[0].description,
       date: new Date(forecast.dt * 1000),
       icon: forecast.weather[0].icon,
+      coordinates: forecast.coord,
     });
-
-    console.log(response.data);
   }
 
-  //Input form
+  //Input Form
   function handleInputChange(event) {
     setCity(event.target.value);
   }
@@ -39,10 +39,11 @@ export default function Weather(props) {
       setEmptyInput("please enter a city");
     } else {
       search();
+      setEmptyInput("");
     }
   }
 
-  //call
+  //set API url
   function search() {
     if (city !== "") {
       let key = "8161b4309ee03faae957729ba7104797";
@@ -72,8 +73,11 @@ export default function Weather(props) {
       {form}
       {emptyInput && <div className="alert alert-warning">{emptyInput}</div>}
       {weather && weather.ready ? (
-        <WeatherInfo data={weather} />
-      ) : ( 
+        <div>
+          <WeatherInfo data={weather} />
+          <WeatherForecast coordinates={weather.coordinates} />
+        </div>
+      ) : (
         <div className="loading">
           <span className="loading__icon"></span>
           <p className="text-center loading__text">Loading</p>
